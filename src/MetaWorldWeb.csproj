@@ -9,7 +9,7 @@
 	  <PackageLicenseFile></PackageLicenseFile>
 	  <RepositoryUrl>https://github.com/b-hulme/MetaWorldWeb</RepositoryUrl>
 	  <PackageTags>meta world procedural generator</PackageTags>
-	  <PackageLicenseExpression>Mozilla Public License Version 2.0</PackageLicenseExpression>
+	  <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
   </PropertyGroup>
 
 	<ItemGroup>

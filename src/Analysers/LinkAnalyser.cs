@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace MetaWorldWeb.Analysers
 {
-    public class LinkAnalyser : IAnalyser
+    internal class LinkAnalyser : IAnalyser
     {
         public ProcessingState Analyse(ref HtmlDocument html, string clientIdentifier, MetaWorldData data)
         {

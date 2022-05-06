@@ -89,13 +89,11 @@ namespace MetaWorldWeb
 
         private async Task<MetaWorldData> PostContentAndAnalyse(FormData formData, string clientIdentifier, int hashRequirement)
         {
-            if (formData.ActionMethod.ToLowerInvariant() != "post")
-            {
-                return null;
-            }
-;
             var dataToPost = formData.Inputs.Concat(formData.Hidden).ToDictionary(x => x.Key, x => x.Value);
-            var content = await _resolver.PostContentAsync(formData.ActionUri, dataToPost);
+
+            var content = formData.ActionMethod.ToLowerInvariant() != "post" ?
+                await _resolver.GetContentAsync(formData.ActionUri, dataToPost) :
+                await _resolver.PostContentAsync(formData.ActionUri, dataToPost);
 
             var result = AnalyseContent(formData.ActionUri, content, clientIdentifier, hashRequirement);
             

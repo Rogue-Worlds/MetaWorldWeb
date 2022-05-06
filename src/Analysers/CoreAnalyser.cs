@@ -7,7 +7,7 @@ using MetaWorldWeb.Models.Internal;
 
 namespace MetaWorldWeb.Analysers
 {
-    public class CoreAnalyser : IAnalyser
+    internal class CoreAnalyser : IAnalyser
     {
         private readonly IHash _hasher;
 

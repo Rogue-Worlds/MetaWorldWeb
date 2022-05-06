@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace MetaWorldWeb.Factories
 {
-    public class AnalyserFactory : IAnalyserFactory
+    internal class AnalyserFactory : IAnalyserFactory
     {
         private readonly IHash _hasher;
 

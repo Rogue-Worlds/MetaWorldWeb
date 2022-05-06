@@ -18,6 +18,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{BDDA83C9
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaWorldWeb.Reader", "utils\MetaWorldWeb.Reader\MetaWorldWeb.Reader.csproj", "{0E99F1B0-93C4-48EB-962F-B7363D1FFC4A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".workflows", ".workflows", "{B5885BB0-97AB-4DFF-AECB-07805FFC87C5}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\metaworldweb-build-deploy.yml = .github\workflows\metaworldweb-build-deploy.yml
+		.github\workflows\metaworldweb-build.yml = .github\workflows\metaworldweb-build.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

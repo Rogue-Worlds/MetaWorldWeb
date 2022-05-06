@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MetaWorldWeb.Processors
 {
-    public class PreProcessor : IPreProcessor
+    internal class PreProcessor : IPreProcessor
     {
 
         public string PreProcessContent(string content)

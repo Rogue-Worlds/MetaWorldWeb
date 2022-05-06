@@ -7,7 +7,7 @@ using MetaWorldWeb.Models;
 
 namespace MetaWorldWeb.Analysers
 {
-    public class WordAnalyser : IAnalyser
+    internal class WordAnalyser : IAnalyser
     {
         public ProcessingState Analyse(ref HtmlDocument html, string clientIdentifier, MetaWorldData data)
         {

@@ -6,7 +6,7 @@ using MetaWorldWeb.Models.Internal;
 
 namespace MetaWorldWeb.Analysers
 {
-    public class FormAnalyser : IAnalyser
+    internal class FormAnalyser : IAnalyser
     {
         public ProcessingState Analyse(ref HtmlDocument html, string clientIdentifier, MetaWorldData data)
         {

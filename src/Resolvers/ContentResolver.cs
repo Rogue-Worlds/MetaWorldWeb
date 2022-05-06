@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MetaWorldWeb.Resolvers
 {
-    public class ContentResolver : IContentResolver
+    internal class ContentResolver : IContentResolver
     {
         private static HttpClient _client;
 
@@ -25,6 +25,28 @@ namespace MetaWorldWeb.Resolvers
             try
             {
                 var response = await _client.GetStringAsync(url);
+                return response;
+            }
+            catch (NullReferenceException nex)
+            {
+                throw new PageLoadException($"Page {url} not available or returned no data.", nex);
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        public async Task<string> GetContentAsync(string url, IDictionary<string, string> formData)
+        {
+            var uri = new UriBuilder(url);
+
+            try
+            {
+                var content = formData != null ? new FormUrlEncodedContent(formData) : null;
+                var query = await content.ReadAsStringAsync();
+                uri.Query = query;
+                var response = await _client.GetStringAsync(uri.Uri.AbsoluteUri);
                 return response;
             }
             catch (NullReferenceException nex)

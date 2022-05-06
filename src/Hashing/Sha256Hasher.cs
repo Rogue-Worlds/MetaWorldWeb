@@ -6,7 +6,7 @@ namespace MetaWorldWeb.Hashing
     /// <summary>
     /// SHA256 based hash generator
     /// </summary>
-    public class Sha256Hasher : IHash
+    internal class Sha256Hasher : IHash
     {
         private readonly short[] _bytes = { 0, 2, 4, 6, 8, 10, 12, 14 };
         private readonly SHA256 _sha256;

@@ -2,6 +2,14 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+	  <Version>0.0.1</Version>
+	  <Authors>Brendan Hulme</Authors>
+	  <Description>A library for interpreting Web pages into a set of hashes and other meta data in order to create a procedurally generated worlds.</Description>
+	  <Copyright>Copyright (c) 2022 Brendan Hulme</Copyright>
+	  <PackageLicenseFile></PackageLicenseFile>
+	  <RepositoryUrl>https://github.com/b-hulme/MetaWorldWeb</RepositoryUrl>
+	  <PackageTags>meta world procedural generator</PackageTags>
+	  <PackageLicenseExpression>Mozilla Public License Version 2.0</PackageLicenseExpression>
   </PropertyGroup>
 
 	<ItemGroup>
